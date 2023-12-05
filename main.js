@@ -1,4 +1,4 @@
-const URL = `https://api-nba-v1.p.rapidapi.com/players/statistics`;
+/* const URL = `https://api-nba-v1.p.rapidapi.com/players/statistics`;
 
 async function getData(URL){
     try {
@@ -15,4 +15,22 @@ async function getData(URL){
   //      document.querySelector("h1").textContent = `Sorry I can't find ${pokemon}`;
     }
 }
-getData(URL);
+getData(URL); */
+
+const axios = require("axios");
+
+const options = {
+  method: "GET",
+  url: "https://api-nba-v1.p.rapidapi.com/seasons",
+  headers: {
+    "X-RapidAPI-Key": "SIGN-UP-FOR-KEY",
+    "X-RapidAPI-Host": "api-nba-v1.p.rapidapi.com",
+  },
+};
+
+try {
+  const response = await response.json();
+  console.log(response.data);
+} catch (error) {
+  console.error(error);
+}
