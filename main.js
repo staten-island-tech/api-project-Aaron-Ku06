@@ -3,7 +3,8 @@
 async function getData(URL){
     try {
       const response = await fetch(URL);
-        if(response.status != 200){
+      console.log(response);
+ //     if(response.status != 200){
  //           throw new Error(response.statusText);
         }
   //      console.log(response);
@@ -14,10 +15,10 @@ async function getData(URL){
     } catch (error) {
   //      document.querySelector("h1").textContent = `Sorry I can't find ${pokemon}`;
     }
-}
-getData(URL); */
 
-const axios = require("axios");
+getData(URL); */ 
+
+/* const axios = require("axios");
 
 const options = {
   method: "GET",
@@ -33,4 +34,12 @@ try {
   console.log(response.data);
 } catch (error) {
   console.error(error);
-}
+} */
+
+const URL = `https://api-nba-v1.p.rapidapi.com/players/statistics`;
+
+async function getData(URL){
+      const response = await fetch(URL);
+      console.log(response);
+    }
+getData(URL);
