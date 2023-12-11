@@ -1,6 +1,6 @@
 import "./style.css";
 
-const URL = `GET https://www.balldontlie.io/api/v1/players`;
+const URL = `https://www.balldontlie.io/api/v1/players`;
 
 async function getData(URL) {
   try {
