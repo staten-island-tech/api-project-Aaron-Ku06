@@ -5,16 +5,13 @@ const URL = `https://www.balldontlie.io/api/v1/players`;
 async function getData(URL) {
   try {
     const response = await fetch(URL);
-    if (response.status != 200) {
-      throw new Error(response.statusText);
-    }
-
   const data = await response.json()
-    console.log(data);
+  document.getElementById("api-response").textContent = data.content
     // document.querySelector("h1").textContent = data.content;
     //  document.querySelector("h2").textContent = data.author;
   } catch (error) {
     //document.querySelector("h1").textContent = `Sorry I can't find`;
+    console.log(error);
   }
 }
 getData(URL);
