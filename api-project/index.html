@@ -1,15 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>NBA Player Database</title>
   </head>
   <body>
-    <div id="app"></div>
-  <h2 id="api-response"></h2>
+    <div class="container">
+      <img id="Logo" src="./public/NBA Logo.png" alt="Official NBA Logo">
+      <h1 id="website-title">NBA Player Database</h1>
+      <div class="submission">
+        <h2><label for="playerName">Search Player:</label></h2>
+        <input
+          type="text"
+          id="Player"
+          placeholder="Enter Player Name Here"
+          required
+        />
+      </div>
+      <div class="data">
+        <h2 class="statistics" id="team-name">Team:</h2>
+        <h2 class="statistics" id="city">City:</h2>
+        <h2 class="statistics" id="position">Position:</h2>
+        <h2 class="statistics" id="conference">Conference:</h2>
+      </div>
+    </div>
     <script type="module" src="main.js"></script>
   </body>
 </html>

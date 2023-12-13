@@ -7,6 +7,7 @@ async function getData(URL) {
     const response = await fetch(URL);
   const data = await response.json()
   document.getElementById("api-response").textContent = data.content
+  console.log(data)
     // document.querySelector("h1").textContent = data.content;
     //  document.querySelector("h2").textContent = data.author;
   } catch (error) {
