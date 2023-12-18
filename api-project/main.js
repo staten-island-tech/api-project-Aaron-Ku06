@@ -33,3 +33,11 @@ try {
 } catch (error) {
 	console.error(error);
 } */
+
+const api_URL = `https://www.balldontlie.io/api/v1/players` // api url
+
+async function getapi(url){  // Defining asyn function
+  const response = await fetch(url); // Storing response
+
+  var
+}
