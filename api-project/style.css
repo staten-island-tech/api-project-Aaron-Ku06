@@ -1,20 +1,22 @@
-.Entire{
-  background: url(./public/NBA\ Background.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   font-family: "Bebas Neue", sans-serif;
+  background: url(./public/NBA\ Background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .website-title{
   font-size: 200px;
+}
+
+.playerName{
+  border: solid;
+  border-radius: 5px;
 }
 
 .submission {
@@ -24,6 +26,10 @@
 }
 
 .statistics {
+  background-color: white;
+  border: solid;
+  border-radius: 7px;
+  
 }
 
 .img{
