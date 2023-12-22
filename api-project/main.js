@@ -17,7 +17,7 @@ async function getData(URL) {
 }
 getData(URL); */
 
-const URL = `https://www.balldontlie.io/api/v1/players`;
+/* const URL = `https://www.balldontlie.io/api/v1/players`;
 
 async function getData(URL) {
   try {
@@ -29,4 +29,29 @@ async function getData(URL) {
     console.log(error);
   }
 }
-getData(URL);
+getData(URL); */
+
+
+
+
+const URL = `https://www.balldontlie.io/api/v1/players`;
+
+async function getData(URL) {
+  try {
+    const response = await fetch(URL);
+    const data = await response.json(); // makSes the data into JSON object we can use 
+    console.log(data);
+    console.log(response);
+    if (response.status != 200) {
+      throw new Error(response.statusText)
+    }
+    let x = Array.from(data.data)
+    for(let i=0; i<x.length; i++){
+      console.log(x[i]);
+    }
+    console.log(reponse);
+  } catch (error) {
+    console.log(error);
+  }
+}
+console.log(getData(URL));
