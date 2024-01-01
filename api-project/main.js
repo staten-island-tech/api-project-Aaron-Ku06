@@ -31,10 +31,9 @@ async function getData(URL) {
 }
 getData(URL); */
 
+var Players = []
 
-
-
-const URL = `https://www.balldontlie.io/api/v1/players`;
+const BASE_URL = `https://www.balldontlie.io/api/v1/players`;
 
 async function getData(URL) {
   try {
@@ -47,11 +46,33 @@ async function getData(URL) {
     }
     let x = Array.from(data.data)
     for(let i=0; i<x.length; i++){
-      console.log(x[i]);
+      Players.push(x[i]);
     }
-    console.log(reponse);
   } catch (error) {
     console.log(error);
   }
 }
-console.log(getData(URL));
+
+const searchPlayers = async(playerName)=>{
+  const response = await fetch(`${BASE_URL}?search=${playerName}`);
+  const data = await response.json(); // makSes the data into JSON object we can use 
+  return data
+}
+
+const handleClick = async()=>{  
+  let playerName = document.getElementById("Player").value
+  let result = await searchPlayers(playerName)
+
+  let player = result.data.length > 0 ? result.data[0] : null
+   
+  if (player){
+    document.getElementById("team-name").innerText = `Team: ${player["team"]["name"]}`
+    document.getElementById("city").innerText = `City: ${player["team"]["city"]}`
+    document.getElementById("position").innerText = `Position: ${player["position"]}`
+    document.getElementById("conference").innerText = `Conference: ${player["team"]["conference"]}`
+  }
+}
+
+document.getElementById("submitButton").onclick = handleClick
+
+// console.log(Players)
