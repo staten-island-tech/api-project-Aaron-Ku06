@@ -1,5 +1,8 @@
 .Entire{
   background: url(./public/NBA\ Background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
@@ -8,9 +11,6 @@
   justify-content: space-around;
   align-items: center;
   font-family: "Bebas Neue", sans-serif;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .website-title{
@@ -35,6 +35,11 @@
   border: solid;
   border-radius: 7px;
   padding: 5px;
+}
+
+input::placeholder{
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
 }
 
 .statistics {
