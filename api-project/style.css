@@ -1,5 +1,5 @@
 .Entire{
-  background: url(/NBA_Background.jpg);
+  background: url(./NBA_Background.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -39,7 +39,7 @@
 
 input::placeholder{
   font-family: "Bebas Neue", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .statistics {
